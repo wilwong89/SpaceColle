@@ -1,6 +1,6 @@
 <template>
-	<div class="testView">
-		<div>Hello Vue.js</div>
+	<div class="testView ml-2">
+		<div>Kasumi hates shitty sites</div>
 		<img src="../assets/KasumiDisgust.png">
 	</div>
 </template>
@@ -10,3 +10,7 @@ export default {
 	name: 'testView'
 }
 </script>
+
+<style>
+
+</style>

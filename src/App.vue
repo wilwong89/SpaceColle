@@ -1,27 +1,25 @@
+
 <template>
 	<div>
-		<div>
-			<router-view class="inblock b-red main-display fl"></router-view>
-			<div class="inblock b-green sidebar fl">
-				<router-link to="/">Home Link</router-link>
-				<router-link to="/testView">Test Empty Link</router-link>
-				<br>
-				&nbsp
-			</div>
-		</div>
-		<div class="b-yellow inblock bottomBar">
-		WRITING SOME TEXT HERE
-		</div>
+		<sidebar>
+		</sidebar>				
+		<bottombar>
+		</bottombar>
 	</div>
 </template>
 
 <script>
+import sidebar from '@/components/Sidebar'
+import bottombar from '@/components/Bottombar'
+
 export default {
-	name: 'app'
+	name: 'app',
+	components: {sidebar, bottombar}
+
 }
 </script>
 
-<style>
+<style >
 #app {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -34,22 +32,23 @@ export default {
 .main-display {
 	min-height: 69vh;
 	max-height: 69vh;
-	min-width: 75vw;
-	max-width: 75vw;
+	/*min-width: 75vw;
+	max-width: 75vw;*/
 }
 
 .sidebar {
+	background-color: white;
 	vertical-align: top;
 	max-height: 69vh;
 	min-height: 69vh;
-	max-width: 20vw;
-	min-width: 20vw;
+	/*max-width: 20vw;
+	min-width: 20vw;*/
 }
 .bottomBar{
 	min-height: 25vh;
 	max-height: 25vh;
-	min-width: 95vw;	
-	max-width: 95vw;
+	/*min-width: 94vw;	
+	max-width: 94vw;*/
 }
 .b-red {
 	border-color: red;
@@ -70,18 +69,6 @@ export default {
 .back-gray {
 	background: gray;
 }
-.inblock {
-	display: inline-block;
-}
-.block {
-	display: block;
-}
 
-.fl {
-	float: left;
-}
 
-.fr {
-	float: right;
-}
 </style>
