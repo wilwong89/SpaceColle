@@ -1,17 +1,15 @@
-<template>
-    <v-layout row>
-        <v-flex xs9 class="pa-0">
-			<router-view class="b-red main-display"></router-view>
-		</v-flex>
-		<v-flex xs3 class="pa-0">
-			<div class="b-green sidebar">
-				<v-btn router to="/">Home Link</v-btn>
-				<v-btn router to="/testView">Kasumi Link</v-btn>
-				<br>
-				&nbsp
-			</div>
-		</v-flex>
-    </v-layout>
+<template>   
+	<div class="b-green sidebar">
+		<div><v-btn router class="red" to="/">Home Link</v-btn></div>
+		<div><v-btn router class="blue" to="/testView">Kasumi Link</v-btn></div>
+		<div><v-btn router class="green" to="/">Home Link</v-btn></div>
+		<div><v-btn router class="gray" to="/">Home Link</v-btn></div>
+		<div><v-btn router class="white" to="/">Home Link</v-btn></div>
+
+		<br>
+		&nbsp
+	</div>
+
 </template>
 
 <script>

@@ -1,8 +1,20 @@
 
 <template>
 	<div>
-		<sidebar>
-		</sidebar>				
+		<v-layout row>
+			<v-flex xs9 class="pa-0">
+				<router-view class="b-red main-display">
+				
+				<!-- Router display templates loaded here -->
+				
+				</router-view>
+			</v-flex>
+			<v-flex xs3 class="pa-0">
+				<sidebar>
+				</sidebar>
+			</v-flex>				
+			
+		</v-layout>
 		<bottombar>
 		</bottombar>
 	</div>
@@ -34,6 +46,7 @@ export default {
 	max-height: 69vh;
 	/*min-width: 75vw;
 	max-width: 75vw;*/
+	overflow: auto;
 }
 
 .sidebar {
