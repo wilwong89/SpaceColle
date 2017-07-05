@@ -16,7 +16,6 @@
 			</md-layout>
 		</md-layout>
 			
-
 		<bottombar>
 		</bottombar>
 	</div>
