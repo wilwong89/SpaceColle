@@ -1,13 +1,13 @@
 <template>
 	<div class="testView">
-		<div>Kasumi hates shitty sites</div>
-		<img src="../assets/KasumiDisgust.png">
+		<div>Kashima hates shitty sites</div>
+		<img src="../assets/KashimaIRL.jpg">
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'testView'
+	name: 'kashView'
 }
 </script>
 

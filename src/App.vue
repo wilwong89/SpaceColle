@@ -1,20 +1,22 @@
 
 <template>
-	<div>
-		<v-layout row>
-			<v-flex xs9 class="pa-0">
-				<router-view class="b-red main-display">
-				
+	<div class="gameArea b-white border-black">
+		<md-layout md-gutter="0">
+			<md-layout md-flex="80">
+				<router-view class="b-black main-display main-and-sidebar-height">
+						
 				<!-- Router display templates loaded here -->
-				
+
 				</router-view>
-			</v-flex>
-			<v-flex xs3 class="pa-0">
-				<sidebar>
+			</md-layout>
+			<md-layout md-flex="20">	
+
+				<sidebar class="b-gray main-and-sidebar-height">
 				</sidebar>
-			</v-flex>				
+			</md-layout>
+		</md-layout>
 			
-		</v-layout>
+
 		<bottombar>
 		</bottombar>
 	</div>
@@ -40,48 +42,61 @@ export default {
 	color: #2c3e50;
   /*margin-top: 60px;*/
 }
-
+.gameArea {
+	min-height: 720px;
+	max-height: 720px;
+	min-width: 1280px;
+	max-width: 1280px;
+}
+.rowOne {
+	min-height: 520px;
+	max-height: 520px;
+	min-width: 1280px;
+	max-width: 1280px;
+}
 .main-display {
-	min-height: 69vh;
-	max-height: 69vh;
-	/*min-width: 75vw;
-	max-width: 75vw;*/
+	width: 100%;
 	overflow: auto;
 }
-
+.main-and-sidebar-height {
+	height: 520px;
+}
 .sidebar {
 	background-color: white;
 	vertical-align: top;
-	max-height: 69vh;
-	min-height: 69vh;
-	/*max-width: 20vw;
-	min-width: 20vw;*/
+	min-height: 520px;
+	max-height: 520px;
+	min-width: 260px;
+	max-width: 260px;
 }
-.bottomBar{
-	min-height: 25vh;
-	max-height: 25vh;
-	/*min-width: 94vw;	
-	max-width: 94vw;*/
-}
+
 .b-red {
-	border-color: red;
-	border-style: solid;
-	border-width: 2px;
+	background-color: red;
 }
 .b-green {
-	border-color: green;
-	border-style: solid;
-	border-width: 2px;
+	background-color: green;
 }
 .b-yellow {
-	border-color: yellow;
-	border-style: solid;
-	border-width: 2px;
+	background-color: yellow;
 }
-
+.b-black {
+	background-color: black;
+}
+.b-white {
+	background-color: white;
+}
+.b-gray {
+	background-color: gray;
+}
 .back-gray {
-	background: gray;
+	background-color: gray;
 }
-
-
+.inblock {
+	display: block;
+}
+.border-black {
+	border-color: yellow;
+	border-width: 2px;
+	border-style: solid;
+}
 </style>

@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Vuetify from 'vuetify'
 import Router from 'vue-router'
+import 'vue-material/dist/vue-material.css'
+import VueMaterial from 'vue-material'
+
 import Hello from '@/views/Hello'
 import testView from '@/views/TestView'
-import 'vuetify/dist/vuetify.min.css'
+import kashView from '@/views/Kashima'
 
 Vue.use(Router)
 Vue.use(Vuex)
-Vue.use(Vuetify)
+Vue.use(VueMaterial)
 
 export default new Router({
 	routes: [
@@ -20,6 +22,10 @@ export default new Router({
 		{
 			path: '/testView',
 			component: testView
+		},
+		{
+			path: '/kashView',
+			component: kashView
 		}
 	]
 })

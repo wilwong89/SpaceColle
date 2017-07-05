@@ -1,9 +1,7 @@
 <template>
-    <v-layout row >
-			<v-flex xs12 class="b-yellow bottomBar">
+    <div>
 			WRITING SOME TEXT HERE
-			</v-flex> 
-	</v-layout>
+	</div>
 </template>
 
 <script>

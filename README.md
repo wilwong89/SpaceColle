@@ -26,5 +26,5 @@ Vuex: a state-management system
 Animejs: a js animation system
 -documentation at http://animejs.com/documentation/
 
-Vuetify: a material component framework
--documentation at https://vuetifyjs.com
+vue material: a material component framework
+-documentation at https://github.com/vuematerial/vue-material
