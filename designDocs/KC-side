@@ -1,0 +1,29 @@
+===KC-side, otherwise known as Admin Management===
+
+Will be similiar to KC in terms of fleet and resource Management
+
+-Resources
+--Are fuel, ammo, and metals (No bauxite for now)
+--Fuel and ammo for sortieing. Metal for repairs.
+--No buckets or development materials
+--Ships are asked to be resupplied on sortie. 
+---When a player selects a map, the "sortie" button will subtract resouces on click
+---They can only sortie on that map if they can resupply all sortieing ships fully
+
+-Weapons
+--Ships do not take ammo themselves. The individual weapons will have an ammo count
+--For example, a railgun might have: 
+{   
+    Big Ass-Cannon: {
+        attackType: "railgun", //railgun type is like FGO's buster type.
+        attackDamage: "int",
+        ammoUsed: "int",
+        ammoPerCost: "int"
+    }
+}
+--Fully resupplied weapon means ammoUsed is zero.
+---Every time this weapon is used in battle, ammoUsed goes up by one
+---Can only sortie if all fleet weapons ammoUsed = 0
+---To reset ammoUsed to zero, player must play ammoUsed * ammoPerCost
+
+
