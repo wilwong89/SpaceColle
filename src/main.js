@@ -32,7 +32,6 @@ const store = new Vuex.Store({
 		someShip: titanic
 	}
 })
-console.log(titanic.getters)
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',

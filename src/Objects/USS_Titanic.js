@@ -42,8 +42,8 @@ export default {
             current: 100
         },
         ammo: {
-            base: 100,
-            current: 100
+            base: 75,
+            current: 75
         }
     },
     mutations: {},

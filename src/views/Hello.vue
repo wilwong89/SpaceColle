@@ -8,28 +8,41 @@
 			</tr>
 			<tr>
 				<td>Ship class</td>
-				<td></td>
+				<td>{{storage}}</td>
 			</tr>
 			<tr>
-				<td><md-button class="md-raised">Mutations!</md-button></td>
+				<td></td>
 				<td></td>
 			</tr>
 		</table>
+		<md-button v-on:click.native="findFuel" class="md-raised">Fuel</md-button>
+		<md-button v-on:click.native="findAmmo" class="md-raised">Ammo</md-button>
+		<md-button v-on:click.native="printLn" class="md-raised">Print</md-button>
 	</div>
 </template>
 
 <script>
 import {mapState} from 'vuex'
+var text = 'text'
 export default {
 	name: 'hello',
+	data () {
+		return {
+			storage: text
+		}
+	},
 	computed: {
 		...mapState(['count', 'count2', 'count3']),
-		shipName () { return this.$store.getters.returnStat('ammo') }
+		shipName () { return this.$store.getters.returnStat('ammo') },
+		argument () { return 'ammo' }
+	},
+	methods: {
+		findFuel () { text = 'fuel' },
+		findAmmo () { text = 'weapons' },
+		printLn () { console.log(text) }
 	}
-/*
-		count () { return this.$store.getters.returnVari('count3') },
-*/
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -11,10 +11,5 @@ export default {
 </script>
 
 <style>
-.bottomBar{
-	min-height: 25vh;
-	max-height: 25vh;
-	/*min-width: 94vw;	
-	max-width: 94vw;*/
-}
+.bottomBar{}
 </style>
