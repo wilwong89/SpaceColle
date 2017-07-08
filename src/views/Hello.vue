@@ -1,33 +1,34 @@
 <template>
-	<div class="hello">
-		<h1>{{ msg }}</h1>
-		<h2 class="b-green">Essential Links</h2>
-		<ul>
-			<li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-			<li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-			<li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-			<li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-			<br>
-			<li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-		</ul>
-		<h2>Ecosystem</h2>
-		<ul>
-			<li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-			<li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-			<li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-			<li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-		</ul>
+	<div class="hello text-green">
+		sdFSdfsdfsdfs {{count}}
+		<table>
+			<tr>
+				<td>Ship Name:</td>
+				<td>{{shipName}}</td>
+			</tr>
+			<tr>
+				<td>Ship class</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><md-button class="md-raised">Mutations!</md-button></td>
+				<td></td>
+			</tr>
+		</table>
 	</div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
 	name: 'hello',
-	data () {
-		return {
-			msg: 'Welcome to Your Vue.js App'
-		}
+	computed: {
+		...mapState(['count', 'count2', 'count3']),
+		shipName () { return this.$store.getters.returnStat('ammo') }
 	}
+/*
+		count () { return this.$store.getters.returnVari('count3') },
+*/
 }
 </script>
 
@@ -36,7 +37,9 @@ export default {
 h1, h2 {
 	font-weight: normal;
 }
-
+.text-green {
+	color: green;
+}
 ul {
 	list-style-type: none;
 	padding: 0;

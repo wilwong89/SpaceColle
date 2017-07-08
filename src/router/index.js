@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+
 import Router from 'vue-router'
 import 'vue-material/dist/vue-material.css'
 import VueMaterial from 'vue-material'
@@ -9,7 +9,7 @@ import testView from '@/views/TestView'
 import kashView from '@/views/Kashima'
 
 Vue.use(Router)
-Vue.use(Vuex)
+
 Vue.use(VueMaterial)
 
 export default new Router({

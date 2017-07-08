@@ -9,21 +9,18 @@ Will be similiar to KC in terms of fleet and resource Management
 --Ships are asked to be resupplied on sortie. 
 ---When a player selects a map, the "sortie" button will subtract resouces on click
 ---They can only sortie on that map if they can resupply all sortieing ships fully
+--Ships will have a hardcoded max value for ammo and fuel.
+---Ex: Battleship (500 fuel, 500 ammo), Destroyer (100 fuel, 50 ammo)
+---Each combat stage will draing 20% and 20% ammo. (Change ammo consumption to per shot later.)
 
--Weapons
---Ships do not take ammo themselves. The individual weapons will have an ammo count
---For example, a railgun might have: 
-{   
-    Big Ass-Cannon: {
-        attackType: "railgun", //railgun type is like FGO's buster type.
-        attackDamage: "int",
-        ammoUsed: "int",
-        ammoPerCost: "int"
-    }
-}
---Fully resupplied weapon means ammoUsed is zero.
----Every time this weapon is used in battle, ammoUsed goes up by one
----Can only sortie if all fleet weapons ammoUsed = 0
----To reset ammoUsed to zero, player must play ammoUsed * ammoPerCost
+-Weapons and equipment
+--Will do nothing for now.
+--Weapons, stats, and equipment are hard coded into ships
+--Only functinality is the capability of equip/unequipping.
+--Weapons and equipment actually affect stats to be implemented later
+
+-Fleet Lineup
+--Setup ship selection exactly like KC.
+--First ship is secretary ship (But we'll call it flagship)
 
 
