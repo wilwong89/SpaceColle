@@ -1,10 +1,12 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+/* eslint-disable */
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
 import titanic from './Objects/USS_Titanic'
+import willie from './Objects/USS_WillieD'
 
 Vue.use(Vuex)
 Vue.config.productionTip = false
@@ -29,10 +31,11 @@ const store = new Vuex.Store({
 		}
 	},
 	modules: {
-		someShip: titanic
+		a: titanic,
+		b: willie
 	}
 })
-/* eslint-disable no-new */
+console.log(store.state)
 new Vue({
 	el: '#app',
 	store,

@@ -25,6 +25,10 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     //Fuck whoever decided to default no tabs in eslint
     'no-tabs': 0,
-    'indent': [0,'tab']
+    'indent': [0,'tab'],
+    'spaced-comment': [0],
+    'no-unused-vars': ['warn', { 'vars': 'all', 'args': 'after-used', 'ignoreRestSiblings': false }],
+    'quotes': [0],
+    'no-constant-condition': [0]
   }
 }

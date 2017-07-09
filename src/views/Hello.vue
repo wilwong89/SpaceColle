@@ -1,6 +1,6 @@
 <template>
 	<div class="hello text-green">
-		sdFSdfsdfsdfs {{count}}
+		Count for 'Home Link' pressed: {{count}}
 		<table>
 			<tr>
 				<td>Ship Name:</td>
@@ -8,41 +8,65 @@
 			</tr>
 			<tr>
 				<td>Ship class</td>
-				<td>{{storage}}</td>
+				<td>{{}}</td>
 			</tr>
 			<tr>
 				<td></td>
 				<td></td>
 			</tr>
 		</table>
-		<md-button v-on:click.native="findFuel" class="md-raised">Fuel</md-button>
-		<md-button v-on:click.native="findAmmo" class="md-raised">Ammo</md-button>
-		<md-button v-on:click.native="printLn" class="md-raised">Print</md-button>
+		<md-button v-on:click.native="titanic" class="md-raised">Fuel</md-button>
+		<md-button v-on:click.native="willieD" class="md-raised">Ammo</md-button>
+		<md-button v-on:click.native="" class="md-raised">Print</md-button>
 	</div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
-var text = 'text'
+import { mapState } from 'vuex'
+var displayObject = { text: 'fuel' }
+var viewedShip = {}
+var initialShip = 'willieD'
+
 export default {
 	name: 'hello',
-	data () {
-		return {
-			storage: text
-		}
+	data: function () {
+		return displayObject
 	},
 	computed: {
 		...mapState(['count', 'count2', 'count3']),
-		shipName () { return this.$store.getters.returnStat('ammo') },
+		shipName () {
+			switch (initialShip) {
+				case 'titanic':
+					return this.$store.state.a.shipName
+				case 'willieD':
+					return this.$store.state.b.shipName
+				default:
+					return viewedShip
+			}
+		}
+	},
+	methods: {
+		titanic () { initialShip = 'titanic' },
+		willieD () { initialShip = 'willieD' }
+	}
+}
+/*
+name: 'hello',
+	data: function () {
+		var tempObject = Object.assign({}, displayObject, viewedShip)
+		return tempObject
+	},
+	computed: {
+		...mapState(['count', 'count2', 'count3']),
+		shipName () { return this.$store.getters.returnStat(displayObject.text) },
 		argument () { return 'ammo' }
 	},
 	methods: {
-		findFuel () { text = 'fuel' },
-		findAmmo () { text = 'weapons' },
-		printLn () { console.log(text) }
+		findFuel () { displayObject.text = 'fuel' },
+		findAmmo () { displayObject.text = 'weapons' },
+		getShip () { viewedShip = this.$store.modules }
 	}
-}
-
+*/
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
