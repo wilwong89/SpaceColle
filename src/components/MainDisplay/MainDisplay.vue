@@ -1,11 +1,15 @@
 <template>
-  <div>
-  </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: "maindisplay"
+  name: "maindisplay",
+  computed: {
+    sidebarPosition() {
+      return this.$store.state.ui.sidebarPosition;
+    }
+  }
 };
 </script>
 
