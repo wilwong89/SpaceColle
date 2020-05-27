@@ -4,7 +4,6 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import Sidebar from "./components/Sidebar.vue";
 import Navbar from "./components/Navbar.vue";
 import MainDisplay from "./components/MainDisplay.vue";
 
@@ -12,7 +11,6 @@ export default {
   name: "App",
   components: {
     HelloWorld,
-    Sidebar,
     Navbar,
     MainDisplay
   }
