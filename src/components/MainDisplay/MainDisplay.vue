@@ -1,6 +1,8 @@
 <template>
   <div>
+    <sidebar ng-if="sidebarPosition"></sidebar>
     <main></main>
+    <sidebar ng-if="!sidebarPosition"></sidebar>
   </div>
 </template>
 
@@ -14,7 +16,8 @@ export default {
   },
   computed: {
     sidebarPosition() {
-      return this.$store.state.ui.sidebarPosition;
+      if (this.$store.state.ui.sidebarPosition === 1) return true;
+      else return false;
     }
   }
 };
