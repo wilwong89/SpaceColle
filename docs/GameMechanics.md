@@ -8,6 +8,8 @@ Players obtain "ships" to form a small fleet squadron. Limit to max 6 ships per 
 # Logistical Aspect
 
 Initial starting point is Kantai Collection style logistical management in terms of ships, leveling, and equipment.
+4 fleet resource types: Fuel, ammunition, metal, drone parts
+Fuel for travel, manuevering, energy weapons. Ammunition for non directed energy weapons. Metal for repairs and fighters, drone parts for fighters and miscellaneous.
 
 # Combat Aspect
 
