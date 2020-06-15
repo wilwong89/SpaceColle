@@ -9,14 +9,14 @@ Loading
 Login
 |
 |
-Main Screen
+Main Screen (Display resources, current location, backdrop art based off location)
 |
-|--Fleet Actions
+|--Fleet Actions (Go to map, travel, battles, other non-logics gameplay)
 |
-|--Fleet Composition
+|--Fleet Composition (Set ships in fleet, formation)
 |
-|--Equipment Composition
+|--Equipment Composition (Set equipment on each ship)
 |
-|--Resource Management
+|--Resource Management (Trade resources, resupply ships (can be auto), purchase from market)
 |
-|--Repair Facilities
+|--Repair Facilities (Repair timers, speed up repairs, (NO KC MORALE))
