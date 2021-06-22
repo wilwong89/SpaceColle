@@ -9,14 +9,14 @@
     <button></button>
     <div></div>
     <button></button>
+    <button></button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "sidebar"
+  name: "sidebar",
 };
 </script>
 
-<style>
-</style>
+<style></style>
